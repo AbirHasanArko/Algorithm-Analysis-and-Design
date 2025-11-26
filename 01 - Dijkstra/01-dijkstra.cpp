@@ -35,7 +35,7 @@ int main()
     cout << "Enter number of vertices and edges: ";
     cin >> n >> m;
 
-    vector<vector<pair<int, int>>> adj(n); // adjacency list
+    vector<vector<pair<int, int>>> adj(n + 1); // adjacency list
 
     cout << "Enter each edge as (u v w):\n";
     for (int i = 0; i < m; i++) {
@@ -52,8 +52,8 @@ int main()
     cout << "Enter the source vertex: ";
     cin >> src;
 
-    vector<ll> dist(n, INF);    // stores shortest distance
-    vector<int> parent(n, -1);  // stores parent for path reconstruction
+    vector<ll> dist(n + 1, INF);    // stores shortest distance
+    vector<int> parent(n + 1, -1);  // stores parent for path reconstruction
     dist[src] = 0;
 
     // priority_queue for selecting the next vertex with minimum distance
@@ -84,7 +84,7 @@ int main()
 
     // display shortest distances from source
     cout << "\nShortest distances from source vertex " << src << ":\n";
-    for (int i = 0; i < n; i++) {
+    for (int i = 1; i <= n; i++) {
         if (dist[i] == INF) {
             cout << "Vertex " << i << " : INF\n";
         } else {
@@ -118,35 +118,35 @@ int main()
 Test case:
 Input:
 5 6
-0 1 2
-0 2 4
-1 2 1
-1 3 7
-2 4 3
-3 4 1
-0
-4
+1 2 2
+1 3 4
+2 3 1
+2 4 7
+3 5 3
+4 5 1
+1
+5
 
 Output:
 Enter number of vertices and edges: 5 6
 Enter each edge as (u v w):
-0 1 2
-0 2 4
-1 2 1
-1 3 7
-2 4 3
-3 4 1
-Enter the source vertex: 0
+1 2 2
+1 3 4
+2 3 1
+2 4 7
+3 5 3
+4 5 1
+Enter the source vertex: 1
 
-Shortest distances from source vertex 0:
-Vertex 0 : 0
-Vertex 1 : 2
-Vertex 2 : 3
-Vertex 3 : 7
-Vertex 4 : 6
+Shortest distances from source vertex 1:
+Vertex 1 : 0
+Vertex 2 : 2
+Vertex 3 : 3
+Vertex 4 : 7
+Vertex 5 : 6
 
-Enter the target vertex to show shortest path: 4
+Enter the target vertex to show shortest path: 5
 
-Shortest Path: 0 1 2 4 
+Shortest Path: 1 2 3 5 
 Total Cost: 6
 */
