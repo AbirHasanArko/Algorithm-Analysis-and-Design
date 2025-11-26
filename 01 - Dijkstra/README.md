@@ -88,6 +88,32 @@ Where `V` is the number of vertices and `E` is the number of edges.
 
 ---
 
+## Example
+
+Enter number of vertices and edges: `5 6`  
+Enter each edge as (u v w):  
+`1 2 2`  
+`1 3 4`  
+`2 3 1`  
+`2 4 7`  
+`3 5 3`  
+`4 5 1`  
+Enter the source vertex: `1`  
+
+Shortest distances from source vertex 1:  
+Vertex 1 : 0  
+Vertex 2 : 2  
+Vertex 3 : 3  
+Vertex 4 : 7  
+Vertex 5 : 6  
+
+Enter the target vertex to show shortest path: `5`  
+
+Shortest Path: 1 2 3 5   
+Total Cost: 6  
+
+---
+
 ## Notes
 
 - Only works for **non-negative edge weights**. Use **Bellman-Ford** if negative weights exist.
