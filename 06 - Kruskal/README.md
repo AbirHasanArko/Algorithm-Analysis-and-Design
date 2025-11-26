@@ -79,7 +79,7 @@ Where `V` is the number of vertices and `E` is the number of edges.
 
 ## Example
 
-**Test Case 1 (Connected Graph):**
+**Test Case 1 (Connected Graph):**  
 Enter number of vertices and edges: `5 7`  
 Enter edges (u v w):  
 `1 2 2`  
@@ -100,7 +100,7 @@ Total minimum cost (sum of all MST components): 8
 Total edges used: 4  
 Graph is connected -> Only 1 MST  
 
-**Test Case 2 (Disconnected Graph):**
+**Test Case 2 (Disconnected Graph):**  
 Enter number of vertices and edges: `7 5`  
 Enter edges (u v w):   
 `1 2 2`  
