@@ -61,6 +61,8 @@ int main()
     cin >> n >> m;
 
     vector<Edge> edges(m);
+    
+    cout << "Enter edges (u v w): " << endl;
     for (int i = 0; i < m; i++) {
         cin >> edges[i].u >> edges[i].v >> edges[i].w;
     }
@@ -120,6 +122,7 @@ Input:
 
 Output:
 Enter number of vertices and edges: 5 7
+Enter edges (u v w):
 1 2 2
 1 3 3
 1 4 1
@@ -151,8 +154,8 @@ Input:
 2 1 2
 
 Output:
-Enter number of vertices and edges:
- 7 5
+Enter number of vertices and edges: 7 5
+Enter edges (u v w):
 1 2 2
 3 4 3
 4 5 1
