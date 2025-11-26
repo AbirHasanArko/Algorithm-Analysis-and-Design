@@ -73,7 +73,7 @@ Where `V` is the number of vertices.
 ---
 
 ## Example
-Enter number of vertices and edges: `4 5` 
+Enter number of vertices and edges: `4 5`  
 Enter edges (u v w):  
 `1 2 4`  
 `1 3 1`  
