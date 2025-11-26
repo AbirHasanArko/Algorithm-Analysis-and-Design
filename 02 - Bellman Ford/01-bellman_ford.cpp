@@ -21,7 +21,7 @@ int main() {
     vector<Edge> edges;
 
     cout << "\nEnter each edge as: u v w\n";
-    cout << "(Example: for edge u→v with weight w, enter: 0 1 5)\n";
+    cout << "(Example: for edge u -> v with weight w, enter: 1 2 5)\n";
     for (int i = 0; i < m; i++) {
         int u, v;
         ll w;
@@ -35,8 +35,8 @@ int main() {
     cin >> src;
 
     // Step 3: Initialize distance and parent arrays
-    vector<ll> dist(n, INF);
-    vector<int> parent(n, -1);
+    vector<ll> dist(n + 1, INF);
+    vector<int> parent(n + 1, -1);
     dist[src] = 0;
 
     // Step 4: Relax all edges (n-1) times
@@ -71,7 +71,7 @@ int main() {
         cout << "\nNo negative weight cycle found.\n";
 
         cout << "\nShortest distances from source vertex " << src << ":\n";
-        for (int i = 0; i < n; i++) {
+        for (int i = 1; i <= n; i++) {
             cout << "Vertex " << i << " : ";
             if (dist[i] == INF)
                 cout << "INF\n";
@@ -124,3 +124,84 @@ int main() {
 
     return 0;
 }
+
+/*
+Test Case 1:
+
+Input:
+6
+8
+1 2 4
+1 3 2
+2 3 -1
+2 4 2
+3 5 3
+5 4 -2
+4 6 1
+5 6 5
+1
+6
+
+Output:
+Enter number of vertices: 6
+Enter number of edges: 8
+
+Enter each edge as: u v w
+(Example: for edge u -> v with weight w, enter: 1 2 5)
+1 2 4
+1 3 2
+2 3 -1
+2 4 2
+3 5 3
+5 4 -2
+4 6 1
+5 6 5
+
+Enter the source vertex: 1
+
+No negative weight cycle found.
+
+Shortest distances from source vertex 1:
+Vertex 1 : 0
+Vertex 2 : 4
+Vertex 3 : 2
+Vertex 4 : 3
+Vertex 5 : 5
+Vertex 6 : 4
+
+Enter the target vertex to show shortest path: 6
+
+Shortest Path: 1 3 5 4 6 
+Total Cost: 4
+*/
+
+/*
+Test Case 2:
+Input:
+4
+5
+1 2 1
+2 3 -1
+3 4 -1
+4 2 -1
+1 4 5
+1
+3
+
+Output:
+Enter number of vertices: 4
+Enter number of edges: 5
+
+Enter each edge as: u v w
+(Example: for edge u -> v with weight w, enter: 1 2 5)
+1 2 1
+2 3 -1
+3 4 -1
+4 2 -1
+1 4 5
+
+Enter the source vertex: 1
+
+Negative weight cycle detected!
+Cycle involves vertices: 2 3 4 2 
+*/
