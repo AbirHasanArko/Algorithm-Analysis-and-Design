@@ -24,6 +24,7 @@ int main()
     }
 
     // Read edges
+    cout << "Enter edges (u v w): " << endl;
     for (int i = 0; i < m; i++) {
         int u, v;
         ll w;
@@ -105,6 +106,7 @@ input:
 
 Output:
 Enter number of vertices and edges: 4 5
+Enter edges (u v w):
 1 2 4
 1 3 1
 3 2 -2
