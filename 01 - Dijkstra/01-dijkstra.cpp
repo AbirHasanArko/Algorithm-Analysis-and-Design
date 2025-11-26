@@ -39,7 +39,8 @@ int main()
 
     cout << "Enter each edge as (u v w):\n";
     for (int i = 0; i < m; i++) {
-        int u, v, w;
+        int u, v;
+        ll w;
         cin >> u >> v >> w;
 
         // since graph is undirected
@@ -70,7 +71,7 @@ int main()
         // explore all adjacent vertices
         for (auto &e : adj[u]) {
             int v = e.first;
-            int w = e.second;
+            ll w = e.second;
 
             // relax edge if a shorter path is found
             if (dist[u] + w < dist[v]) {
@@ -112,3 +113,40 @@ int main()
 
     return 0;
 }
+
+/*
+Test case:
+Input:
+5 6
+0 1 2
+0 2 4
+1 2 1
+1 3 7
+2 4 3
+3 4 1
+0
+4
+
+Output:
+Enter number of vertices and edges: 5 6
+Enter each edge as (u v w):
+0 1 2
+0 2 4
+1 2 1
+1 3 7
+2 4 3
+3 4 1
+Enter the source vertex: 0
+
+Shortest distances from source vertex 0:
+Vertex 0 : 0
+Vertex 1 : 2
+Vertex 2 : 3
+Vertex 3 : 7
+Vertex 4 : 6
+
+Enter the target vertex to show shortest path: 4
+
+Shortest Path: 0 1 2 4 
+Total Cost: 6
+*/
