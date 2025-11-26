@@ -14,6 +14,13 @@ Given a weighted, undirected graph:
 
 Prim's algorithm builds the MST **incrementally**, starting from an arbitrary vertex and repeatedly adding the **cheapest edge** that connects a new vertex to the growing tree.
 
+**This problem is useful in:**
+
+- Network design (minimum cost connections)  
+- Circuit design and electrical networks  
+- Traffic routing and infrastructure planning  
+- Optimization problems in graphs and competitive programming
+
 ---
 
 ## Algorithm Overview
