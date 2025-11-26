@@ -99,5 +99,3 @@ Shortest distance: 1
 - Can handle **negative edge weights**, but **negative cycles are not supported**.  
 - Uses a **parent matrix** to reconstruct shortest paths efficiently.  
 - Ideal for solving **all-pairs shortest path** problems in graphs with moderate vertex counts.
-**Input format:**
-
