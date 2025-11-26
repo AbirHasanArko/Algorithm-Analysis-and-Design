@@ -62,6 +62,7 @@ int main()
     }
 
     // --- Print MST edges ---
+    cout << "\nMST Edges:\n";
     for (int i = 2; i <= n; i++)
     {
         cout << parent[i] << "-" << i << " (weight: " << key[i] << ")\n";
@@ -95,6 +96,8 @@ Enter edges (u v w):
 2 4 4
 3 4 5
 4 5 7
+
+MST Edges:
 1-2 (weight: 2)
 2-3 (weight: 1)
 2-4 (weight: 4)
