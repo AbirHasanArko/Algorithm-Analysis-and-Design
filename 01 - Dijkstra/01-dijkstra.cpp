@@ -31,6 +31,8 @@ const ll INF = (1LL << 60); // A large value representing infinity
 
 int main()
 {
+    cout << "Hello!\n\n";
+    
     int n, m;
     cout << "Enter number of vertices and edges: ";
     cin >> n >> m;
